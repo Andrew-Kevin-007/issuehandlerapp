@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Issues</title>
+    <link rel="stylesheet" href="/apple.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>📌 Issues Dashboard</h1>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Reported Issues</h2>
+        <a href="/issues/new" class="btn btn-primary">+ New Issue</a>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="i : ${issues}">
+                <td th:text="${i.id}"></td>
+                <td th:text="${i.title}"></td>
+
+                <td th:classappend="
+                    ${i.priority=='High'} ? 'priority-high' :
+                    (${i.priority=='Medium'} ? 'priority-medium' : 'priority-low')"
+                    th:text="${i.priority}">
+                </td>
+
+                <td>
+                    <span th:classappend="
+                        ${i.status=='Open'} ? 'badge badge-open' :
+                        (${i.status=='In-Progress'} ? 'badge badge-progress' : 'badge badge-closed')"
+                        th:text="${i.status}">
+                    </span>
+                </td>
+                <td>
+   <a th:href="@{/issues/update/{id}(id=${i.id})}" class="btn btn-primary">
+      Update
+   </a>
+</td>
+<td>
+   <span th:if="${i.status=='Resolved'}" style="color:green;">
+      ✅ Notified Tester
+   </span>
+</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <a href="/" class="btn btn-light">⬅ Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

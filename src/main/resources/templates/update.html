@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Issue</title>
+    <link rel="stylesheet" href="/apple.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>🔧 Developer Status Update</h1>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <h2 th:text="${issue.title}"></h2>
+        <p th:text="${issue.description}"></p>
+
+        <form action="/issues/update" method="post">
+
+            <input type="hidden" name="id" th:value="${issue.id}">
+
+            <label>Status</label>
+            <select name="status">
+                <option>Open</option>
+                <option>In-Progress</option>
+                <option>Resolved</option>
+                <option>Closed</option>
+            </select>
+
+            <br><br>
+            <button class="btn btn-primary">Update Status</button>
+
+        </form>
+
+        <br>
+        <a href="/issues" class="btn btn-light">⬅ Back</a>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Issue</title>
+    <link rel="stylesheet" href="/apple.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>📝 Create Issue</h1>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>New Bug Report</h2>
+
+        <form action="/issues" method="post">
+
+            <label>Issue Title</label>
+            <input type="text" name="title" required>
+
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+
+            <label>Priority</label>
+            <select name="priority">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+<label>Assign Developer</label>
+<input type="text" name="assignedTo" placeholder="Developer Name" required>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Save Issue</button>
+            <a href="/" class="btn btn-light">Cancel</a>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

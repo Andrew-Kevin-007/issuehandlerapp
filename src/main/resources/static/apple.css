@@ -1,0 +1,135 @@
+/* Apple-like clean UI */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f5f7;
+    margin: 0;
+    padding: 0;
+    color: #1d1d1f;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.navbar {
+    background: white;
+    padding: 18px 30px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+}
+
+.navbar h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.06);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #0071e3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+}
+
+.btn-light {
+    background: #e8e8ed;
+    color: black;
+}
+
+.btn-light:hover {
+    background: #d2d2d7;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table th {
+    text-align: left;
+    font-size: 14px;
+    color: #6e6e73;
+    padding: 12px;
+}
+
+.table td {
+    padding: 14px 12px;
+    border-top: 1px solid #eee;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.badge-open {
+    background: #ffeccc;
+    color: #9a5b00;
+}
+
+.badge-progress {
+    background: #d6ecff;
+    color: #005bb5;
+}
+
+.badge-closed {
+    background: #d7f8d7;
+    color: #0a6b0a;
+}
+
+.priority-high {
+    color: #ff3b30;
+    font-weight: 600;
+}
+
+.priority-medium {
+    color: #ff9500;
+    font-weight: 600;
+}
+
+.priority-low {
+    color: #34c759;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+label {
+    font-weight: 500;
+    margin-top: 15px;
+    display: block;
+}
