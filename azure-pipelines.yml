@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: TestAgent
+  vmImage: ubuntu-latest
 
 steps:
 - script: mvn -v
