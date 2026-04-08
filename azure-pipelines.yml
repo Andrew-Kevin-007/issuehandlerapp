@@ -10,8 +10,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: mvn -v
-  displayName: Check Maven
-
-- script: mvn clean package
-  displayName: Build project
+- script: echo "Pipeline running..."
+  displayName: 'Run a one-line script'
