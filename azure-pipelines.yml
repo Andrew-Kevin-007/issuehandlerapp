@@ -1,14 +1,9 @@
-# Maven
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: Default
 
 steps:
-- script: echo "Pipeline running..."
-  displayName: 'Run a one-line script'
+- script: echo "Pipeline running successfully on self-hosted agent"
+  displayName: Run test
